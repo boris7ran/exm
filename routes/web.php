@@ -20,3 +20,4 @@ Route::get('/movies/create', ['as' => 'create-movie', 'uses' => 'MoviesControlle
 Route::post('/movies', ['as' => 'store-movie', 'uses' => 'MoviesController@store']);
 Route::post('/comments/add/{movieId}', ['as' => 'comments-movie', 'uses' => 'CommentsController@store']);
 Route::get('/movies/{id}', ['as' => 'single-movie', 'uses' => 'MoviesController@show']);
+Route::get('/genres/{genres}', ['as' => 'all-genres', 'uses' => 'GenresController@show']);

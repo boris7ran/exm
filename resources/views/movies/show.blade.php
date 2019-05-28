@@ -5,7 +5,7 @@
 @section('content')
     <body>
         <h1>{{ $movie->title}}</h1>
-        <h3>{{ $movie->genre}}</h3>
+        <h3><a href="{{ '/genres/' . $movie->genre }}">{{ $movie->genre}}</a></h3>
         <h2>{{ $movie->director}}</h2>
         <h3>{{ $movie->year}}</h3>
         <h3>{{ $movie->storyline}}</h3>
