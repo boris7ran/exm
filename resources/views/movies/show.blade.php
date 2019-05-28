@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Movie</title>
-    </head>
+@extends('layouts.master')
+
+@section('title', 'Movie')
+
+@section('content')
     <body>
         <h1>{{ $movie->title}}</h1>
+        <h3>{{ $movie->genre}}</h3>
+        <h2>{{ $movie->director}}</h2>
+        <h3>{{ $movie->year}}</h3>
+        <h3>{{ $movie->storyline}}</h3>
     </body>
-</html>
+@endsection
