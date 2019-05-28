@@ -17,8 +17,24 @@
             @foreach ($movie->comments as $comment)            
             <li class="list-group-item"> 
                 <p>{{ $comment->content }} </p>
+                <p>{{ $comment->created_at  }}</p>
             </li>
             @endforeach
         </ul>
     @endif
+
+    <form method="POST" action="{{ route('comments-movie', ['movie_id' => $movie->id]) }}">
+        @csrf
+
+        <div class="form-group">
+            <label for="content"> Content </label>
+            <input type="text" id="content" name="content">
+        </div>
+
+        <div class="form-group">
+            <button type="submit">Submit</button>
+
+        </div>
+
+    </form>
 @endsection
